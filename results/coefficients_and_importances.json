@@ -1,0 +1,66 @@
+{
+  "OLS_dv_portwatch_tonnes": {
+    "mlr_avg_mw": -134016.14143344972,
+    "petrol95_level": 49829.475917406846,
+    "cpi_yoy_pct": 250738.22988957982,
+    "unemployment_rate_pct": -449590.6687639759,
+    "usdzar_avg": -129472.27944316244,
+    "mlr_x_petrol95": 427898.6419301055
+  },
+  "Ridge_dv_portwatch_tonnes": {
+    "mlr_avg_mw": -10544.916096836569,
+    "petrol95_level": -437.53394426158405,
+    "cpi_yoy_pct": -17602.974672281955,
+    "unemployment_rate_pct": -61078.58061535799,
+    "usdzar_avg": -6955.511870548861,
+    "mlr_x_petrol95": 64646.07439426985
+  },
+  "Lasso_dv_portwatch_tonnes": {
+    "mlr_avg_mw": 0.0,
+    "petrol95_level": 0.0,
+    "cpi_yoy_pct": 0.0,
+    "unemployment_rate_pct": 0.0,
+    "usdzar_avg": 0.0,
+    "mlr_x_petrol95": 0.0
+  },
+  "RF_dv_portwatch_tonnes": {
+    "mlr_avg_mw": 0.1021492923556566,
+    "petrol95_level": 0.19687112479723187,
+    "cpi_yoy_pct": 0.13487320155287771,
+    "unemployment_rate_pct": 0.2129439403921837,
+    "usdzar_avg": 0.08176446092502374,
+    "mlr_x_petrol95": 0.27139797997702636
+  },
+  "OLS_dv_bci": {
+    "mlr_avg_mw": -0.517345232562666,
+    "petrol95_level": -0.6883312398904833,
+    "cpi_yoy_pct": -1.9468397119517182,
+    "unemployment_rate_pct": -0.7240675756150206,
+    "usdzar_avg": -4.338211386298548,
+    "mlr_x_petrol95": 0.21425101615841236
+  },
+  "Ridge_dv_bci": {
+    "mlr_avg_mw": -1.0917807938329978,
+    "petrol95_level": -0.8844058773961982,
+    "cpi_yoy_pct": -0.995011911559564,
+    "unemployment_rate_pct": -0.37096929168444853,
+    "usdzar_avg": -3.2817226497973215,
+    "mlr_x_petrol95": 0.5638528562798683
+  },
+  "Lasso_dv_bci": {
+    "mlr_avg_mw": -0.26257856246783284,
+    "petrol95_level": -0.33144943827783174,
+    "cpi_yoy_pct": -1.7343334649053823,
+    "unemployment_rate_pct": -0.0,
+    "usdzar_avg": -3.410765857098989,
+    "mlr_x_petrol95": 0.21284766895199897
+  },
+  "RF_dv_bci": {
+    "mlr_avg_mw": 0.009265850283876897,
+    "petrol95_level": 0.04687058598312484,
+    "cpi_yoy_pct": 0.04851545813483302,
+    "unemployment_rate_pct": 0.02790513372496134,
+    "usdzar_avg": 0.7903580289841806,
+    "mlr_x_petrol95": 0.07708494288902329
+  }
+}

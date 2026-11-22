@@ -1,0 +1,74 @@
+========================================================================
+DATA INPUTS MANIFEST — group1_monthly_merged.csv
+========================================================================
+
+USED IN THE MERGE (5 files, one row per source):
+
+1. KZN set — kzn_monthly_historical_features_standardized.csv
+   Frequency: monthly, Jan 2022-Sep 2026 (57 rows)
+   Contributes: dv_portwatch_tonnes, portwatch_kzn_portcalls,
+   dv_tnpa_tonnes_validation, tnpa_vessel_arrivals_validation,
+   tnpa_teus_validation, petrol95_level, diesel_level
+   Role: BACKBONE — the only source spanning the full study window
+
+2. ITDPA set — clean_loadshedding_monthly.csv.xlsx
+   Frequency: monthly, Apr 2022-Sep 2026 (54 rows)
+   Contributes: mlr_avg_mw, mlr_max_mw, ls_hours, ils_avg_mw,
+   residual_demand_mw, dispatch_gen_mw, ls_active, ls_share_of_hours
+   Role: primary independent variable (loadshedding severity)
+
+3. ITDPA set — clean_fuel_monthly.csv.xlsx
+   Frequency: monthly, Jan-Aug 2026 only (8 rows)
+   Contributes: petrol93_chg_cl_2026, diesel005_chg_cl_2026, and
+   related cumulative/absolute change columns
+   Role: supplementary — 2026 price MOVEMENT (not levels; see gap note)
+
+4. ITDPA set — clean_macro_monthly.csv.xlsx
+   Frequency: monthly, 2026 only (9 rows)
+   Contributes: repo_rate, exports_rbn, imports_rbn, trade_balance_rbn
+   Role: control variables (2026-only coverage)
+
+5. ITDPA set — clean_macro_quarterly.csv.xlsx
+   Frequency: quarterly, 2022Q1-2026Q3 (19 quarters, broadcast to months)
+   Contributes: dv_bci (RMB/BER Business Confidence Index)
+   Role: SECOND, broader outcome variable (cross-sector sentiment)
+
+6. controls set — controls set_Control_Variables_Prepared.xlsx
+   Sheets used: "CPI KZN Monthly" (monthly, continuous),
+   "Quarterly Controls" (unemployment, USD/ZAR, repo/prime rate)
+   Contributes: cpi_index, cpi_yoy_pct, unemployment_rate_pct,
+   usdzar_avg, repo_rate_pct
+   Role: control variables
+
+DELIBERATELY NOT MERGED (cleaned, but redundant or unsuitable for a
+monthly model — kept in data/raw for reference / write-up evidence):
+
+- ITDPA set: clean_ports_monthly, other pre-merged summary workbooks — superseded by the KZN set's longer backbone,
+  which already covers the same Jan-Aug 2026 port figures
+- ITDPA set: clean_qes_sector.csv.xlsx — a single quarter, not a time
+  series; cannot be modelled, use only as narrative evidence
+- KZN set: kzn_quarterly_historical_features — a quarterly duplicate of
+  the monthly backbone already in use
+- KZN set: portwatch_daily_clean, portwatch_monthly_by_port,
+  tnpa_kzn_historical_monthly, fuel_prices_historical_monthly —
+  component files already aggregated into the backbone's KZN totals
+- KZN set: kzn_gdp_annual, tnpa_portwatch_overlapping_months — annual
+  (too coarse to merge monthly) / a validation diagnostic, not a
+  model feature
+- controls set: KZN_QLFS_Quarterly_Summary.xlsx — same unemployment figures
+  already in "Quarterly Controls"; GDP KZN Annual, GDP Real Growth,
+  USDZAR Daily, standalone "Interest Rates" sheet — annual or daily
+  granularity not needed once the quarterly/monthly versions are in
+
+========================================================================
+MERGE RUN LOG
+========================================================================
+
+Backbone (KZN set, PortWatch+TNPA+fuel-to-Oct2025): 57 months, 2022-01 to 2026-09
++ Loadshedding (ITDPA set): joined on month. Missing before Apr 2022 (data starts there): 3 months with no loadshedding reading.
++ Fuel 2026 month-on-month changes (ITDPA set) added as separate columns (*_2026 suffix) rather than chained into petrol95_level/diesel_level: Nov-Dec 2025 price levels are missing from every contribution supplied so far -- OPEN ITEM, see merge_log.
++ CPI (monthly, continuous) and unemployment/USD-ZAR/repo rate (quarterly, broadcast to each month) added from the controls workbook. Repo rate is NaN before 2026Q1 -- it is only populated for 2026 in the supplied data (per the controls set's own README); do not treat pre-2026 repo rate as zero or impute it.
++ Business Confidence Index (ITDPA set, quarterly, broadcast to months): dv_bci present for 57 of 57 months -- continuous across the full study window, unlike the port-based outcomes. Use as a SECOND outcome variable so the research question covers business performance broadly, not only port/logistics throughput.
+
+Final merged dataset: 57 rows x 37 columns, 2022-01 to 2026-09
+Saved to data/processed/group1_monthly_merged.csv

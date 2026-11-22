@@ -1,0 +1,5 @@
+outcome,model,alpha,search_max,hit_ceiling,nonzero_coefs,n_features
+dv_portwatch_tonnes,Ridge,152.64179671752333,1000.0,False,6,6
+dv_portwatch_tonnes,Lasso,394420.6059437664,1000000.0,False,0,6
+dv_bci,Ridge,4.498432668969444,1000.0,False,6,6
+dv_bci,Lasso,0.49770235643321115,1000000.0,False,5,6

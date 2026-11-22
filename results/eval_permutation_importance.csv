@@ -1,0 +1,49 @@
+outcome,model,split,feature,rmse_increase,sd
+dv_portwatch_tonnes,Ridge,test,mlr_avg_mw,155.26504620461026,414.2576214186036
+dv_portwatch_tonnes,Ridge,test,petrol95_level,-19.072087801573797,35.14380568096835
+dv_portwatch_tonnes,Ridge,test,cpi_yoy_pct,598.303127251321,987.9357288883623
+dv_portwatch_tonnes,Ridge,test,unemployment_rate_pct,14817.389655550069,10134.023904667427
+dv_portwatch_tonnes,Ridge,test,usdzar_avg,386.0428024184215,1023.4043673868277
+dv_portwatch_tonnes,Ridge,test,mlr_x_fuel,-2019.21013988371,6751.132584345827
+dv_portwatch_tonnes,Ridge,train,mlr_avg_mw,852.364713743222,1542.328686811079
+dv_portwatch_tonnes,Ridge,train,petrol95_level,-6.939481340216007,90.96349161764086
+dv_portwatch_tonnes,Ridge,train,cpi_yoy_pct,1898.1504971254897,2829.766836584492
+dv_portwatch_tonnes,Ridge,train,unemployment_rate_pct,22579.864287072953,9607.388226617273
+dv_portwatch_tonnes,Ridge,train,usdzar_avg,456.33510196294634,1246.4898481857263
+dv_portwatch_tonnes,Ridge,train,mlr_x_fuel,28253.578191632725,9862.246082857886
+dv_portwatch_tonnes,Random Forest,test,mlr_avg_mw,1195.0705374301597,707.6681812655581
+dv_portwatch_tonnes,Random Forest,test,petrol95_level,-8754.839697409572,11359.694271716431
+dv_portwatch_tonnes,Random Forest,test,cpi_yoy_pct,-3187.6338219490553,4309.3945898941365
+dv_portwatch_tonnes,Random Forest,test,unemployment_rate_pct,0.0,0.0
+dv_portwatch_tonnes,Random Forest,test,usdzar_avg,-5225.6689984505365,5979.136115782985
+dv_portwatch_tonnes,Random Forest,test,mlr_x_fuel,-8923.493200713783,21260.368355623068
+dv_portwatch_tonnes,Random Forest,train,mlr_avg_mw,19063.77422276598,4518.323755729097
+dv_portwatch_tonnes,Random Forest,train,petrol95_level,63725.99592259456,17774.484965156298
+dv_portwatch_tonnes,Random Forest,train,cpi_yoy_pct,42523.24305485745,8507.708336638287
+dv_portwatch_tonnes,Random Forest,train,unemployment_rate_pct,79204.98769624876,26775.575379990438
+dv_portwatch_tonnes,Random Forest,train,usdzar_avg,16687.734332234853,4692.778097019443
+dv_portwatch_tonnes,Random Forest,train,mlr_x_fuel,83860.14613447337,24710.69885791687
+dv_bci,Ridge,test,mlr_avg_mw,-0.0927547281644713,0.03757181191605788
+dv_bci,Ridge,test,petrol95_level,-0.16406446554697418,0.07560834907503039
+dv_bci,Ridge,test,cpi_yoy_pct,0.15281725162038778,0.0653359886266395
+dv_bci,Ridge,test,unemployment_rate_pct,-0.04227557155006769,0.09037463643308503
+dv_bci,Ridge,test,usdzar_avg,-0.49874884492978183,0.4742523069064469
+dv_bci,Ridge,test,mlr_x_fuel,-0.1410188982591021,0.059721050700919195
+dv_bci,Ridge,train,mlr_avg_mw,0.45551301743309175,0.18142402900038268
+dv_bci,Ridge,train,petrol95_level,0.29444531637897453,0.1477369618363162
+dv_bci,Ridge,train,cpi_yoy_pct,0.37666933565371236,0.17019245415079576
+dv_bci,Ridge,train,unemployment_rate_pct,0.04668992350574869,0.06664902545856918
+dv_bci,Ridge,train,usdzar_avg,2.768873780666057,0.43788637644885575
+dv_bci,Ridge,train,mlr_x_fuel,0.11590923869878722,0.10396364386346306
+dv_bci,Random Forest,test,mlr_avg_mw,0.0,0.0
+dv_bci,Random Forest,test,petrol95_level,-0.35398610570044037,0.16651282505353976
+dv_bci,Random Forest,test,cpi_yoy_pct,0.15209690350383653,0.16517134937131916
+dv_bci,Random Forest,test,unemployment_rate_pct,0.053709553976563386,0.0504694338559549
+dv_bci,Random Forest,test,usdzar_avg,-0.5006892761281398,0.21415624212767728
+dv_bci,Random Forest,test,mlr_x_fuel,-0.4439557836487424,0.19826373423736762
+dv_bci,Random Forest,train,mlr_avg_mw,0.04643205765152606,0.012727736291087756
+dv_bci,Random Forest,train,petrol95_level,0.2407126318847079,0.07550553681773985
+dv_bci,Random Forest,train,cpi_yoy_pct,0.30036629191488967,0.058276490081877595
+dv_bci,Random Forest,train,unemployment_rate_pct,0.15270105242520113,0.03664218332655515
+dv_bci,Random Forest,train,usdzar_avg,4.889540352724769,0.6794603226532618
+dv_bci,Random Forest,train,mlr_x_fuel,0.5730760507730674,0.12279394204434237
